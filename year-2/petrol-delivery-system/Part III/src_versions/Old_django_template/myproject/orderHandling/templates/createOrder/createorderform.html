@@ -1,0 +1,39 @@
+{% extends "app/layout.html" %}
+{% block content %}
+<div class="formadditem" >
+ <br>
+ <h2><p><strong>Create Order Form</strong></p></h2>
+<form method="POST" action="createorderconfirmation">
+    {% csrf_token %}
+
+    <label for="vendor_id">Vendor ID:</label>
+    <input type="text" name="vendor_id" required>
+    <br>
+
+    <label for="petrol_type">Select Petrol Type:</label>
+
+    <select name="petrol_type" required>
+        <option value="RON95">RON 95</option>
+        <option value="RON97">RON 97</option>
+        <option value="RON100">RON 100</option>
+        <option value="Diesel">Diesel</option>
+    </select>
+    <br>
+
+    <label for="quantity">Quantity (Liters):</label>
+    <input type="number" name="quantity" step="0.01" required>
+    <br>
+
+    <label for="delivery_address">Delivery Address:</label>
+    <input type="text" name="delivery_address" required>
+    <br>
+
+    <button class = "btn btn-info" type="submit">Submit Order</button>
+</form>
+<br>
+</div>
+
+<a href="{% url 'menu' %}">
+    <button class="btn btn-info">Return to Home</button>
+</a>
+{% endblock %}

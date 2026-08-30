@@ -1,0 +1,41 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<br>
+<h2><strong>Edit Account Details</strong></h2>
+
+<div class="container">
+    <form method="POST" class="card p-4 shadow-sm">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="customer_name" class="form-label">Name:</label>
+            <input type="text" id="customer_name" name="customer_name" value="{{ customer.customer_name }}" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="customer_email" class="form-label">Email:</label>
+            <input type="email" id="customer_email" name="customer_email" value="{{ customer.customer_email }}" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="customer_phone" class="form-label">Phone:</label>
+            <input type="text" id="customer_phone" name="customer_phone" value="{{ customer.customer_phone }}" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="customer_address" class="form-label">Address:</label>
+            <textarea id="customer_address" name="customer_address" class="form-control" rows="3" required>{{ customer.customer_address }}</textarea>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-info">Save Changes</button>
+    </form>
+
+    <br>
+
+    <a href="{% url 'menu' %}">
+        <button class="btn btn-info">Return to Home</button>
+    </a>
+</div>
+
+{% endblock %}

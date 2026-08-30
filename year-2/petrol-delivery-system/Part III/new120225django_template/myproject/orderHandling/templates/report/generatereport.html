@@ -1,0 +1,25 @@
+{% extends "app/layout.html" %}
+{% block content %}
+<br>
+<h2><strong>Generate Report</strong></h2>
+
+<form method="post" action="{% url 'generatereport' %}">
+    {% csrf_token %}
+    <div>
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+    </div>
+    <div>
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required>
+    </div>
+    <button type="submit">Generate Report</button>
+</form>
+
+{% if report %}
+    <h3>Report for Vendor: {{ vendor.vendor_name }}</h3>
+    <p>Report Date: {{ report.report_date }}</p>
+    <p>Total Orders: {{ report.total_orders }}</p>
+    <p>Total Revenue: RM{{ report.total_revenue }}</p>
+{% endif %}
+{% endblock %}

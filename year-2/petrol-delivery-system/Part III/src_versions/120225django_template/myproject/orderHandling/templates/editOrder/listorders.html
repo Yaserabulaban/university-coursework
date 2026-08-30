@@ -1,0 +1,42 @@
+{% extends "app/layout.html" %}
+{% block content %}
+<br>
+
+<h2><strong>Editable Orders</strong></h2>
+
+<table border="1">
+    <tr>
+        <th style="padding: 10px; text-align: center;">Order ID</th>
+        <th style="padding: 10px; text-align: center;">Customer ID</th>
+        <th style="padding: 10px; text-align: center;">Petrol Type</th>
+        <th style="padding: 10px; text-align: center;">Quantity</th>
+        <th style="padding: 10px; text-align: center;">Total Amount</th>
+        <th style="padding: 10px; text-align: center;">Status</th>
+        <th style="padding: 10px; text-align: center;">Action</th>
+    </tr>
+    {% for order in orders %}
+    <tr>
+        <td style="padding: 10px; text-align: center;">{{ order.order_id }}</td>
+        <td style="padding: 10px; text-align: center;">{{ order.customer_id }}</td>
+        <td style="padding: 10px; text-align: center;">{{ order.petrol_type }}</td>
+        <td style="padding: 10px; text-align: center;">{{ order.quantity }}</td>
+        <td style="padding: 10px; text-align: center;">{{ order.total_amount }}</td>
+        <td style="padding: 10px; text-align: center;">{{ order.order_status }}</td>
+        <td style="padding: 10px; text-align: center;">
+            <a href="{% url 'editorder' order_id=order.order_id %}">Edit Order</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="7">No editable orders found.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="{% url 'menu' %}">
+    <button class="btn btn-info">Return to Home</button>
+</a>
+
+{% endblock %}
+

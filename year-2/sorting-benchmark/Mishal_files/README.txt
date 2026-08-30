@@ -1,0 +1,10 @@
+how to run the code:
+python binary_search_step.py quick_sort_1000.csv 1981761604
+
+python merge_sort_step.py dataset_sample_1000.csv 1 7
+
+python = keyword
+then src code file name (i.e. merge_sort_step.py)
+then dataset file name (i.e. dataset_sample_1000.csv)
+1 7 the range (start row, end row)
+1981761604 this is the target to find any binary search code

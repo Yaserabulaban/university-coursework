@@ -1,0 +1,54 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<br>
+<h2><strong>Update Order Status</strong></h2>
+
+{% if orders %}
+    <table border="1">
+        <tr>
+            <th style="padding: 10px; text-align: center;">Order ID</th>
+            <th style="padding: 10px; text-align: center;">Customer ID</th>
+            <th style="padding: 10px; text-align: center;">Petrol Type</th>
+            <th style="padding: 10px; text-align: center;">Quantity</th>
+            <th style="padding: 10px; text-align: center;">Total Amount</th>
+            <th style="padding: 10px; text-align: center;">Status</th>
+            <th style="padding: 10px; text-align: center;">Complete Order</th>
+            <th style="padding: 10px; text-align: center;">Cancel Order</th>
+        </tr>   
+        {% for order in orders %}
+        <tr>
+            <td style="padding: 10px; text-align: center;">{{ order.order_id }}</td>
+            <td style="padding: 10px; text-align: center;">{{ order.customer_id }}</td>
+            <td style="padding: 10px; text-align: center;">{{ order.petrol_type }}</td>
+            <td style="padding: 10px; text-align: center;">{{ order.quantity }}</td>
+            <td style="padding: 10px; text-align: center;">{{ order.total_amount }}</td>
+            <td style="padding: 10px; text-align: center;">{{ order.order_status }}</td>
+            <td style="padding: 10px; text-align: center;">
+                <a href="{% url 'updateorderstatus' order.order_id 'complete' %}">
+                    <button>Complete</button>
+                </a>
+            </td>
+            <td style="padding: 10px; text-align: center;">
+                <a href="{% url 'updateorderstatus' order.order_id 'cancelled' %}">
+                    <button>Cancel</button>
+                </a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="8">No available orders to accept.</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No orders to display.</p>
+{% endif %}
+
+<br>
+
+<a href="{% url 'menu' %}">
+    <button class="btn btn-info">Return to Home</button>
+</a>
+
+{% endblock %}

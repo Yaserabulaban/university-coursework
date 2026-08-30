@@ -1,0 +1,20 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<br>
+<h2 class="text mb-4"> <strong>Driver Performance</strong></h2>
+
+<div class="container">
+    <div class="card p-4 shadow-sm">
+        <h4 class="mb-3">Driver: {{ driver.driver_name }}</h4>
+
+        <p><strong>Completed Orders:</strong> {{ driver.completed_orders_count }}</p>
+        <p><strong>Total Earnings:</strong> ${{ driver.total_earnings|floatformat:2 }}</p>
+    </div>
+
+    <a href="{% url 'menu' %}">
+        <button class="btn btn-info">Return to Home</button>
+    </a>
+    
+</div>
+{% endblock %}

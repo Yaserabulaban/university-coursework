@@ -1,0 +1,20 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<br>
+<h2><strong>Edit Order #{{ order.order_id }}</strong></h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Changes</button>
+</form>
+
+<a href="{% url 'listorders' %}">Back to Order List</a>
+
+<br>
+<a href="{% url 'menu' %}">
+    <button class="btn btn-info">Return to Home</button>
+</a>
+
+{% endblock %}
