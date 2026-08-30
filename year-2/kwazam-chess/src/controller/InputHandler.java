@@ -42,7 +42,6 @@ public class InputHandler extends MouseAdapter {
      * @param controller The game controller to handle user actions.
      * @param boardView  The board view where the user interacts.
      *                   (OOP: Dependency Injection)
-     *                   Written by: Yaser Abulaba
      */
     public InputHandler(GameController controller, BoardView boardView) {
         this.controller = controller;
@@ -60,7 +59,6 @@ public class InputHandler extends MouseAdapter {
      * - Prevents rapid double-clicks with a debounce mechanism.
      * 
      * @param e The MouseEvent triggered by the user's click.
-     *          Written by: Yaser Abulaba
      */
     @Override
     public void mouseClicked(MouseEvent e) {

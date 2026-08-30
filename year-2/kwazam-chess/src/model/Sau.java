@@ -40,7 +40,6 @@ public class Sau extends KwazamPiece {
      * @param y     The starting y-coordinate of the piece.
      * 
      *              **OOP Concept:** Constructor for object initialization.
-     *              Written by: Zainab
      */
     public Sau(String color, int x, int y) {
         super(color, x, y, "Sau");
@@ -59,7 +58,6 @@ public class Sau extends KwazamPiece {
      *         for the Sau piece.
      *         **Design Pattern:** Strategy Pattern - Encapsulates movement logic
      *         within the Sau class.
-     *         Written by: Zainab
      */
     @Override
     public List<int[]> getValidMoves(KwazamBoard board) {
@@ -86,7 +84,6 @@ public class Sau extends KwazamPiece {
      * The Sau piece does not transform.
      * 
      * **OOP Concept:** Polymorphism - Implements a no-op transform method for Sau.
-     * Written by: Zainab
      */
     @Override
     public void transform() {

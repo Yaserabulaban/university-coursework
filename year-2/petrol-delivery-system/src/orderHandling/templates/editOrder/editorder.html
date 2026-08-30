@@ -1,0 +1,36 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="formeditorder">
+    <h2><strong>Edit Order</strong></h2>
+
+    {% if error_message %}
+        <p style="color:red;">{{ error_message }}</p>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label for="petrol_type">Select Petrol Type:</label>
+        <select name="petrol_type" required>
+            <option value="RON95" {% if order.petrol_type == "RON95" %}selected{% endif %}>RON 95</option>
+            <option value="RON97" {% if order.petrol_type == "RON97" %}selected{% endif %}>RON 97</option>
+            <option value="RON100" {% if order.petrol_type == "RON100" %}selected{% endif %}>RON 100</option>
+            <option value="Diesel" {% if order.petrol_type == "Diesel" %}selected{% endif %}>Diesel</option>
+        </select>
+        <br>
+
+        <label for="quantity">Quantity (Liters):</label>
+        <input type="number" name="quantity" step="0.01" value="{{ order.quantity }}" required>
+        <br>
+
+        <label for="delivery_address">Delivery Address:</label>
+        <input type="text" name="delivery_address" value="{{ order.delivery_address }}" required>
+        <br>
+
+        <p><strong>Current Total Amount:</strong> ${{ order.total_amount }}</p>
+
+        <button type="submit" class="btn btn-info">Save Changes</button>
+    </form>
+</div>
+{% endblock %}

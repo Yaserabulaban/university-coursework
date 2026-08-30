@@ -49,7 +49,6 @@ public class BoardView extends JPanel {
      * 
      * @param controller The game controller to handle interactions.
      *                   (OOP: Dependency Injection)
-     *                   Written by: Yaser Abulaban
      */
     public BoardView(GameController controller) {
         this.controller = controller; // Controller reference (MVC Pattern)
@@ -61,7 +60,6 @@ public class BoardView extends JPanel {
      * 
      * @param moves List of valid moves as [x, y] coordinates.
      *              (OOP: Encapsulation, Abstraction)
-     *              Written by: Yaser Abulaban
      */
     public void setValidMoves(List<int[]> moves) {
         this.validMoves = new ArrayList<>();
@@ -84,7 +82,6 @@ public class BoardView extends JPanel {
      * 
      * @param flipped True if the board should be flipped, false otherwise.
      *                (OOP: Encapsulation)
-     *                Written by: Yaser Abulaban
      */
     public void setFlipped(boolean flipped) {
         this.isFlipped = flipped;
@@ -96,7 +93,6 @@ public class BoardView extends JPanel {
      * 
      * @param g The Graphics object used for rendering.
      *          (OOP: Polymorphism via Overriding)
-     *          Written by: Narmithaa
      */
     @Override
     protected void paintComponent(Graphics g) {
@@ -158,7 +154,6 @@ public class BoardView extends JPanel {
      * @param y          The y-coordinate for drawing.
      * @param cellWidth  The width of each cell.
      * @param cellHeight The height of each cell.
-     *                   Written by: Narmithaa
      */
     private void drawPiece(Graphics g, KwazamPiece piece, int x, int y, int cellWidth, int cellHeight) {
         String imagePath = "images/" + piece.getColor().toLowerCase() + "_" + piece.getType().toLowerCase() + ".png";

@@ -10,20 +10,18 @@ venv/
 *.exe
 .DS_Store
 Thumbs.db
-.__built
+db.sqlite3
+.RData
+.Rhistory
 
-# generated benchmark output — regenerate with the scripts in year-2/sorting-benchmark
+# generated benchmark input — regenerate with year-2/sorting-benchmark/src/dataset_generator.java
 year-2/sorting-benchmark/*_sort_*.csv
 year-2/sorting-benchmark/dataset_*.csv
 
-# superseded drafts and assignment briefs kept only for local reference
-year-1/robot-war-simulator/Previous_Copies/
-year-1/robot-war-simulator/Assignment docs/
-
-# large secondary Airbnb tables — listings.csv is the one the model trains on.
+# large secondary Airbnb tables — data/listings.csv is the one the model trains on.
 # Full set: http://insideairbnb.com/get-the-data (Boston, scrape 20160906204935)
-year-2/airbnb-property-classification/Datasets/calendar.csv
-year-2/airbnb-property-classification/Datasets/reviews.csv
+year-2/airbnb-property-classification/data/calendar.csv
+year-2/airbnb-property-classification/data/reviews.csv
 
 # enhancement outputs are reproducible from src/ against the sample inputs in dataset/
 year-3/image-enhancement/output/

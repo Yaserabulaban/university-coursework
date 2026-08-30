@@ -59,7 +59,6 @@ public class GameController {
      * Design Pattern:
      * - Dependency Injection: Injects dependencies for `GameState` and
      * `MainWindow`.
-     * Written by: Yaser Abulaban
      */
     public GameController() {
         this.gameState = new GameState(); // Initialize the game state (OOP: Encapsulation).
@@ -69,7 +68,6 @@ public class GameController {
     /**
      * Starts the game by making the main window visible.
      * This initializes the View and kicks off the game.
-     * Written by: Yaser Abulaban
      */
 
     public void startGame() {
@@ -83,7 +81,6 @@ public class GameController {
      * @param x The x-coordinate of the clicked cell.
      * @param y The y-coordinate of the clicked cell.
      * 
-     *          Written by: Yaser Abulaban
      */
     public void handleBoardClick(int x, int y) {
         boolean isFlipped = gameState.getCurrentPlayer().equals("Blue"); // Determine board orientation.
@@ -109,7 +106,6 @@ public class GameController {
      * @return The adjusted coordinate.
      * 
      * 
-     *         Written by: Narmithaa
      */
     private int adjustCoordinate(int coord, boolean isFlipped, boolean isX) {
         return isFlipped ? (isX ? 4 - coord : 7 - coord) : coord; // Flip coordinates if necessary.
@@ -120,7 +116,6 @@ public class GameController {
      * 
      * @return True if no piece is currently selected; false otherwise.
      * 
-     *         Written by: Narmithaa
      */
     private boolean isFirstClick() {
         return currentX == -1 && currentY == -1;
@@ -133,7 +128,6 @@ public class GameController {
      * @param adjustedX The x-coordinate of the selected piece.
      * @param adjustedY The y-coordinate of the selected piece.
      * @param isFlipped Whether the board is flipped.
-     *                  Written by: Yaser Abulaban
      */
     private void handleFirstClick(KwazamPiece piece, int adjustedX, int adjustedY, boolean isFlipped) {
 
@@ -161,7 +155,6 @@ public class GameController {
      * 
      * @param adjustedX The x-coordinate of the destination cell.
      * @param adjustedY The y-coordinate of the destination cell.
-     *                  Written by: Yaser Abulaban
      */
     private void handleSecondClick(int adjustedX, int adjustedY) {
         KwazamPiece selectedPiece = gameState.getBoard().getPieceAt(currentX, currentY);
@@ -182,7 +175,6 @@ public class GameController {
      * @param piece     The piece to calculate moves for.
      * @param isFlipped Whether the board is flipped.
      * @return A list of valid moves.
-     *         Written by: Yaser Abulaban
      */
     private List<int[]> getValidMoves(KwazamPiece piece, boolean isFlipped) {
         List<int[]> validMoves = piece.getValidMoves(gameState.getBoard());
@@ -202,7 +194,6 @@ public class GameController {
      * @param adjustedX The destination x-coordinate.
      * @param adjustedY The destination y-coordinate.
      * @return True if the move is valid; false otherwise.
-     *         Written by: Narmithaa
      */
     private boolean isValidMove(KwazamPiece piece, int adjustedX, int adjustedY) {
         return piece.getValidMoves(gameState.getBoard()).stream()
@@ -215,7 +206,6 @@ public class GameController {
      * @param selectedPiece The piece being moved.
      * @param adjustedX     The destination x-coordinate.
      * @param adjustedY     The destination y-coordinate.
-     *                      Written by: Yaser Abulaban
      */
     private void processMove(KwazamPiece selectedPiece, int adjustedX, int adjustedY) {
         boolean moveSuccessful = gameState.getBoard().movePiece(currentX, currentY, adjustedX, adjustedY);
@@ -234,7 +224,6 @@ public class GameController {
      * @param selectedPiece The piece being moved.
      * @param adjustedX     The destination x-coordinate.
      * @param adjustedY     The destination y-coordinate.
-     *                      Written by: Narmithaa
      */
     private void logMove(KwazamPiece selectedPiece, int adjustedX, int adjustedY) {
         String move = gameState.getCurrentPlayer() + " " + selectedPiece.getType() + " moved from (" + currentX + ", "
@@ -244,7 +233,6 @@ public class GameController {
 
     /**
      * Handles end-of-turn logic, including turn switching and transformations.
-     * Written by: Yaser Abulaban
      */
     private void handleTurnEnd() {
         if (gameState.getCurrentPlayer().equals("Blue")) {
@@ -260,7 +248,6 @@ public class GameController {
 
     /**
      * Switches to the next player.
-     * Written by: Narmithaa
      */
     private void switchPlayer() {
         gameState.setCurrentPlayer(gameState.getCurrentPlayer().equals("Red") ? "Blue" : "Red");
@@ -269,7 +256,6 @@ public class GameController {
 
     /**
      * Clears move highlights from the board.
-     * Written by: Yaser Abulaban
      */
     private void clearHighlights() {
         mainWindow.getBoardView().setValidMoves(new ArrayList<>());
@@ -278,7 +264,6 @@ public class GameController {
 
     /**
      * Resets the selection state after a turn.
-     * Written by: Yaser Abulaban
      */
     private void resetSelection() {
         currentX = -1;
@@ -287,7 +272,6 @@ public class GameController {
 
     /**
      * Resets the game state and starts a new game.
-     * Written by: Yaser Abulaban
      */
     public void restartGame() {
 
@@ -322,7 +306,6 @@ public class GameController {
      * Retrieves the list of all pieces currently on the board.
      * 
      * @return A list of all pieces in the game.
-     *         Written by: Yaser Abulaban
      */
     public List<KwazamPiece> getPieces() {
         List<KwazamPiece> pieces = gameState.getBoard().getAllPieces();
@@ -332,7 +315,6 @@ public class GameController {
     /**
      * Saves the current game state.
      * 
-     * Written by: Yaser Abulaban
      */
     public void saveGame() {
         String saveDirectory = "saved_games";
@@ -371,7 +353,6 @@ public class GameController {
     /**
      * Loads a game state from a file.
      * 
-     * Written by: Yaser Abulaban
      */
     public void loadGame() {
         // Prompt the user to save the current game before loading
@@ -411,7 +392,6 @@ public class GameController {
 
     /**
      * Refreshes the view to reflect the current game state.
-     * Written by: Yaser Abulaban
      */
     private void refreshView() {
 
@@ -452,7 +432,6 @@ public class GameController {
      * **Design Pattern:**
      * - **MVC:** The method operates on the Model (`GameState`, `KwazamBoard`)
      * while ensuring the View (`MainWindow`) is updated.
-     * Written by: Yaser Abul
      */
     private void transformPieces() {
         // Retrieve all pieces currently on the board
@@ -517,7 +496,6 @@ public class GameController {
      *                         (e.g., "Tor").
      * @param transformedPiece The piece object after transformation, containing the
      *                         new type and its current position.
-     *                         Written by: Yaser Abulaban
      */
     private void logTransformation(String originalType, KwazamPiece transformedPiece) {
         // Construct the log message describing the transformation

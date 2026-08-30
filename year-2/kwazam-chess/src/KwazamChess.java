@@ -5,7 +5,6 @@ import controller.GameController;
  * 
  * **Purpose**:
  * - Initializes the core components of the application and launches the game.
- * Written by: Yaser Abulaba
  */
 public class KwazamChess {
 

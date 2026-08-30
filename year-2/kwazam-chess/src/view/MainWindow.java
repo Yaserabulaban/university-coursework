@@ -56,7 +56,6 @@ public class MainWindow extends JFrame {
      * 
      * @param controller The game controller to manage user interactions.
      *                   (OOP: Dependency Injection)
-     *                   Written by: Yaser Abulaban
      */
     public MainWindow(GameController controller) {
         setTitle("Kwazam Chess");
@@ -92,7 +91,6 @@ public class MainWindow extends JFrame {
 
     /**
      * Clears the move history display.
-     * Written by: Yaser Abulaban
      */
     public void clearMoveHistory() {
         moveHistory.setText(""); // Clear the text area
@@ -104,7 +102,6 @@ public class MainWindow extends JFrame {
      * 
      * @param message The message to display (e.g., current player's turn).
      *                (OOP: Encapsulation)
-     *                Written by: Yaser Abulaban
      */
     public void updateStatusBar(String message) {
         statusBar.setText(message); // Update the status bar
@@ -115,7 +112,6 @@ public class MainWindow extends JFrame {
      * - Automatically scrolls to the bottom to show the latest move.
      * 
      * @param move The move to add to the history.
-     *             Written by: Yaser Abulaban
      */
     public void updateMoveHistory(String move) {
         moveHistory.append(move + "\n");
@@ -127,7 +123,6 @@ public class MainWindow extends JFrame {
      * 
      * @return The BoardView component.
      *         (OOP: Abstraction, MVC Pattern)
-     *         Written by: Yaser Abulaban
      */
     public BoardView getBoardView() {
         return boardView;
@@ -139,7 +134,6 @@ public class MainWindow extends JFrame {
      * 
      * @param winner The winning player's color.
      *               (OOP: Abstraction, Encapsulation)
-     *               Written by: Fakhira
      */
     public void showGameOverDialog(String winner) {
         int option = JOptionPane.showOptionDialog(
@@ -164,7 +158,6 @@ public class MainWindow extends JFrame {
      * before loading a new one.
      *
      * @return True if the user chooses to proceed with loading; false otherwise.
-     *         Written by: Fakhira
      */
     public boolean handleLoadGamePrompt() {
         int option = JOptionPane.showConfirmDialog(
@@ -191,7 +184,6 @@ public class MainWindow extends JFrame {
      *
      * @param fileName The slot number that the user wants to overwrite.
      * @return True if the user confirms overwriting, false otherwise.
-     *         Written by: Fakhira
      */
     public boolean showOverwriteConfirmation(String fileName) {
         int choice = JOptionPane.showConfirmDialog(
@@ -209,7 +201,6 @@ public class MainWindow extends JFrame {
      * Shows all available saved games in the "saved_games/" directory.
      *
      * @return The selected file path, or null if canceled.
-     *         Written by: Yaser Abulaban
      */
     public String showLoadSlotDialog() {
         File directory = new File("saved_games");
@@ -255,7 +246,6 @@ public class MainWindow extends JFrame {
      * Displays a confirmation dialog asking if the user wants to load the game.
      *
      * @return True if the user confirms loading, false otherwise.
-     *         Written by: Yaser Abulaban
      */
     public boolean showLoadConfirmationDialog() {
         int choice = JOptionPane.showConfirmDialog(
@@ -307,7 +297,6 @@ public class MainWindow extends JFrame {
      * @param message The message to display.
      * @param title   The title of the dialog.
      * @param type    The message type (e.g., warning, confirmation).
-     *                Written by: Yaser Abulaban
      */
     public void showMessageDialog(String message, String title, int type) {
         JOptionPane.showMessageDialog(this, message, title, type);

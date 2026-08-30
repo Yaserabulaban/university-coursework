@@ -57,7 +57,6 @@ public class Biz extends KwazamPiece {
      * 
      *         **Design Pattern:** Encapsulates movement behavior within the Biz
      *         class, following the Strategy Pattern.
-     *         Written by: Fakhira
      */
     @Override
     public List<int[]> getValidMoves(KwazamBoard board) {
@@ -84,7 +83,6 @@ public class Biz extends KwazamPiece {
      * The Biz piece does not transform.
      * 
      * **OOP Concept:** Polymorphism - Implements a no-op transform method for Biz.
-     * Written by: Fakhira
      */
     @Override
     public void transform() {

@@ -43,7 +43,6 @@ public class MenuBar extends JMenuBar {
      * 
      * @param controller The game controller to handle menu actions.
      *                   (OOP: Dependency Injection)
-     *                   Written by: Narmithaa
      */
     public MenuBar(GameController controller) {
         // Create the main menu

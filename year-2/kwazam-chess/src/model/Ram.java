@@ -43,7 +43,6 @@ public class Ram extends KwazamPiece {
      *              OOP Concept: Constructor for object initialization.
      *              Responsibility: Initializes the Ram piece with its color and
      *              position.
-     *              Written by: Fakhira
      */
     public Ram(String color, int x, int y) {
         super(color, x, y, "Ram");
@@ -61,7 +60,6 @@ public class Ram extends KwazamPiece {
      *         for the Ram piece.
      *         **Design Pattern:** Strategy Pattern - Encapsulates movement logic
      *         within the Ram class.
-     *         Written by: Fakhira
      */
     @Override
     public List<int[]> getValidMoves(KwazamBoard board) {
@@ -86,7 +84,6 @@ public class Ram extends KwazamPiece {
      * 
      *             **OOP Concept:** Polymorphism - Extends the base `move` behavior
      *             with additional logic for reversing direction.
-     *             Written by: Fakhira
      */
     @Override
     public void move(int newX, int newY) {
@@ -102,7 +99,6 @@ public class Ram extends KwazamPiece {
      * The Ram piece does not transform.
      * 
      * **OOP Concept:** Polymorphism - Implements a no-op transform method for Ram.
-     * Written by: Fakhira
      */
     @Override
     public void transform() {

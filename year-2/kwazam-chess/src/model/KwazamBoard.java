@@ -52,7 +52,6 @@ public class KwazamBoard {
      * 
      * **OOP Concept: Encapsulation**
      * - The board is initialized and populated with pieces internally.
-     * Written by: Zainab
      */
     public KwazamBoard() {
         board = new KwazamPiece[ROWS][COLUMNS];
@@ -61,7 +60,6 @@ public class KwazamBoard {
 
     /**
      * Initializes the board with the starting positions of all pieces.
-     * Written by: Zainab
      */
     private void initializeBoard() {
         placeRedPiece();
@@ -70,7 +68,6 @@ public class KwazamBoard {
 
     /**
      * Places the red pieces on the board.
-     * Written by: Zainab
      */
     public void placeRedPiece() {
         String color = "Red";
@@ -79,7 +76,6 @@ public class KwazamBoard {
 
     /**
      * Places the blue pieces on the board.
-     * Written by: Zainab
      */
     public void placeBluePiece() {
         String color = "Blue";
@@ -90,7 +86,6 @@ public class KwazamBoard {
      * Adds all the pieces of a specific color to their correct positions.
      * 
      * @param color The color of the pieces to add ("Red" or "Blue").
-     *              Written by: Zainab
      */
     public void addAllPiece(String color) {
         addRam(color);
@@ -102,7 +97,6 @@ public class KwazamBoard {
 
     /**
      * Adds the Ram pieces to their starting positions.
-     * Written by: Zainab
      */
     public void addRam(String color) {
         int row = (color.equals("Blue")) ? 1 : 6;
@@ -113,7 +107,6 @@ public class KwazamBoard {
 
     /**
      * Adds the Sau piece to its starting position.
-     * Written by: Zainab
      */
     public void addSau(String color) {
         int row = (color.equals("Blue")) ? 0 : 7;
@@ -123,7 +116,6 @@ public class KwazamBoard {
 
     /**
      * Adds the Xor piece to its starting position.
-     * Written by: Zainab
      */
     public void addXor(String color) {
         int row = (color.equals("Blue")) ? 0 : 7;
@@ -133,7 +125,6 @@ public class KwazamBoard {
 
     /**
      * Adds the Tor piece to its starting position.
-     * Written by: Zainab
      */
     public void addTor(String color) {
         int row = (color.equals("Blue")) ? 0 : 7;
@@ -143,7 +134,6 @@ public class KwazamBoard {
 
     /**
      * Adds the Biz pieces to their starting positions.
-     * Written by: Zainab
      */
     public void addBiz(String color) {
         int row = (color.equals("Blue")) ? 0 : 7;
@@ -155,7 +145,6 @@ public class KwazamBoard {
      * Adds a piece to the specified position on the board.
      * 
      * @param piece The piece to add to the board.
-     *              Written by: Zainab
      */
     public void addPiece(KwazamPiece piece) {
         int x = piece.getPosition()[0];
@@ -171,7 +160,6 @@ public class KwazamBoard {
      * @param x The x-coordinate to check.
      * @param y The y-coordinate to check.
      * @return True if the position is valid, false otherwise.
-     *         Written by: Zainab
      */
     public boolean isValidPosition(int x, int y) {
         return x >= 0 && x < COLUMNS && y >= 0 && y < ROWS;
@@ -183,7 +171,6 @@ public class KwazamBoard {
      * @param x The x-coordinate of the cell.
      * @param y The y-coordinate of the cell.
      * @return True if the cell is empty, false otherwise.
-     *         Written by: Zainab
      */
     public boolean isCellEmpty(int x, int y) {
         return isValidPosition(x, y) && board[y][x] == null;
@@ -200,7 +187,6 @@ public class KwazamBoard {
      * @param toX   The destination x-coordinate.
      * @param toY   The destination y-coordinate.
      * @return True if the move is successful, false otherwise.
-     *         Written by: Yaser Abulaban
      */
     public boolean movePiece(int fromX, int fromY, int toX, int toY) {
         KwazamPiece piece = board[fromY][fromX];
@@ -240,7 +226,6 @@ public class KwazamBoard {
      * @param x The x-coordinate of the position.
      * @param y The y-coordinate of the position.
      * @return The piece at the position, or null if the cell is empty.
-     *         Written by: Yaser Abulaban
      */
     public KwazamPiece getPieceAt(int x, int y) {
         if (!isValidPosition(x, y)) {
@@ -254,7 +239,6 @@ public class KwazamBoard {
      * 
      * @param currentPlayer The current player's color.
      * @return True if the game is over; false otherwise.
-     *         Written by: Zainab
      */
     public boolean isGameOver(String currentPlayer) {
         return getAllPieces().stream()
@@ -265,7 +249,6 @@ public class KwazamBoard {
      * Retrieves all pieces currently on the board.
      * 
      * @return A list of all KwazamPiece objects on the board.
-     *         Written by: Yaser Abulaban
      */
     public List<KwazamPiece> getAllPieces() {
         List<KwazamPiece> pieces = new ArrayList<>();
@@ -281,7 +264,6 @@ public class KwazamBoard {
 
     /**
      * Clears the board by setting all cells to null.
-     * Written by: Yaser Abulaban
      */
     public void clearBoard() {
         for (int y = 0; y < ROWS; y++) {
@@ -298,7 +280,6 @@ public class KwazamBoard {
      * @param newPiece The new piece to place on the board.
      * @param x        The x-coordinate of the position.
      * @param y        The y-coordinate of the position.
-     *                 Written by: Yaser Abulaban
      */
     public void replacePiece(KwazamPiece newPiece, int x, int y) {
         if (isValidPosition(x, y)) {

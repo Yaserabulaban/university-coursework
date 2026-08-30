@@ -58,7 +58,6 @@ public abstract class KwazamPiece {
      * @param x     The starting x-coordinate of the piece.
      * @param y     The starting y-coordinate of the piece.
      * @param type  The type of the piece (e.g., "Ram", "Biz").
-     *              Written by: Yaser Abulaban
      */
     public KwazamPiece(String color, int x, int y, String type) {
         this.color = color;
@@ -74,7 +73,6 @@ public abstract class KwazamPiece {
      * - Provides controlled access to the `color` field.
      * 
      * @return The color of the piece ("Red" or "Blue").
-     *         Written by: Yaser Abulaban
      */
     public String getColor() {
         return color;
@@ -87,7 +85,6 @@ public abstract class KwazamPiece {
      * - Provides controlled access to the `type` field.
      * 
      * @return The type of the piece (e.g., "Ram", "Biz").
-     *         Written by: Yaser Abulaban
      */
     public String getType() {
         return type;
@@ -101,7 +98,6 @@ public abstract class KwazamPiece {
      * array.
      * 
      * @return An array [x, y] representing the current position of the piece.
-     *         Written by: Yaser Abulaban
      */
     public int[] getPosition() {
         return new int[] { x, y };
@@ -117,7 +113,6 @@ public abstract class KwazamPiece {
      * 
      * @param board The current state of the game board.
      * @return A list of valid moves as [x, y] coordinates.
-     *         Written by: Narmithaa
      */
     public abstract List<int[]> getValidMoves(KwazamBoard board);
 
@@ -128,7 +123,6 @@ public abstract class KwazamPiece {
      * - **Abstraction:** Delegates transformation logic to subclasses.
      * - **Polymorphism:** Supports dynamic invocation of transformations on pieces.
      * 
-     * Written by: Narmithaa
      */
     public abstract void transform();
 
@@ -141,7 +135,6 @@ public abstract class KwazamPiece {
      * 
      * @param newX The new x-coordinate for the piece.
      * @param newY The new y-coordinate for the piece.
-     *             Written by: Narmithaa
      */
     public void move(int newX, int newY) {
         this.x = newX;

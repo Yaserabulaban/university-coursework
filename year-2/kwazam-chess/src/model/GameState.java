@@ -48,7 +48,6 @@ public class GameState {
      * Constructor to initialize the game state.
      * - Initializes the board and sets default values for the current player
      * and turn counter.
-     * Written by: Yaser Abulaban
      */
     public GameState() {
         this.board = new KwazamBoard();
@@ -64,7 +63,6 @@ public class GameState {
      *                 **OOP Concept: Abstraction**
      *                 - Encapsulates the logic for saving game state, hiding
      *                 implementation details.
-     *                 Written by: Yaser Abulaban
      */
     public void saveGame(String filePath) {
         try {
@@ -115,7 +113,6 @@ public class GameState {
      * @param filePath The file path from which to load the game state.
      *                 OOP Concept: Abstraction
      *                 - Encapsulates file reading logic and state restoration.
-     *                 Written by: Yaser Abulaban
      */
     public void loadGame(String filePath) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -162,7 +159,6 @@ public class GameState {
      * Gets the game board instance.
      * 
      * @return The KwazamBoard object representing the game board.
-     *         Written by: Yaser Abulaban
      */
     public KwazamBoard getBoard() {
         return board;
@@ -172,7 +168,6 @@ public class GameState {
      * Gets the current player.
      * 
      * @return The current player's color ("Red" or "Blue").
-     *         Written by: Yaser Abulaban
      */
     public String getCurrentPlayer() {
         return currentPlayer;
@@ -183,7 +178,6 @@ public class GameState {
      * - Resets the board, current player, and turn counter.
      * Design Pattern: Factory Pattern
      * - Resets the board by creating a new `KwazamBoard` object.
-     * Written by: Zainab
      */
     public void restartGame() {
         this.board = new KwazamBoard(); // Reset the board
@@ -196,7 +190,6 @@ public class GameState {
      * Sets the current player.
      * 
      * @param currentPlayer The player's color to set ("Red" or "Blue").
-     *                      Written by: Zainab
      */
     public void setCurrentPlayer(String currentPlayer) {
         this.currentPlayer = currentPlayer;
@@ -206,7 +199,6 @@ public class GameState {
      * Checks if the current player's Sau has been captured.
      * 
      * @return True if the game is over (Sau captured), false otherwise.
-     *         Written by: Zainab
      */
     public boolean isGameOver() {
         return board.isGameOver(currentPlayer);
@@ -216,7 +208,6 @@ public class GameState {
      * Increments the global turn counter.
      * **Design Pattern: Singleton-like Shared State**
      * - Maintains a global shared counter for turn tracking.
-     * Written by: Zainab
      */
     public static void incrementTurnCounter() {
         turnCounter++;
@@ -226,7 +217,6 @@ public class GameState {
      * Gets the current turn counter.
      * 
      * @return The number of completed turns.
-     *         Written by: Zainab
      */
     public int getTurnCounter() {
         return turnCounter;

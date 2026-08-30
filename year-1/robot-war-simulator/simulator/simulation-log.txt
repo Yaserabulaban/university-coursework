@@ -1,0 +1,270 @@
+Simulation Log
+Step 1 of 8
+Current battlefield state:
+. . . . . 
+. . S . . 
+. . K J . 
+. B A . . 
+. . . . . 
+Processing robot: MadBot (Kidd) at position (2, 2)
+Robot MadBot is looking.
+Robot MadBot is firing.
+Updating position for robot: MadBot
+Processing robot: RoboTank (Jet) at position (2, 3)
+Robot RoboTank is firing.
+Updating position for robot: RoboTank
+Processing robot: Terminator (Alpha) at position (3, 2)
+Robot Terminator is looking.
+Robot Terminator is stepping.
+Updating position for robot: Terminator
+Processing robot: BlueThunder (Beta) at position (3, 1)
+Processing robot: RoboCop (Star) at position (1, 2)
+Robot RoboCop is looking.
+Robot RoboCop is moving.
+Robot RoboCop is firing.
+Updating position for robot: RoboCop
+Dequeued robot: BlueThunder for respawn
+End of step 1
+
+Final Stats:
+Jet (RoboTank) - Lives: 3 - Kills: 0
+Alpha (Terminator) - Lives: 3 - Kills: 1
+Star (RoboCop) - Lives: 3 - Kills: 0
+Beta (BlueThunder) - Lives: 2 - Kills: 0
+Step 2 of 8
+Current battlefield state:
+B S . . . 
+. . . . . 
+. . A J . 
+. . . . . 
+. . . . . 
+Processing robot: RoboTank (Jet) at position (2, 3)
+Robot RoboTank is firing.
+Updating position for robot: RoboTank
+Processing robot: Terminator (Alpha) at position (2, 2)
+Robot Terminator is looking.
+Robot Terminator is stepping.
+Updating position for robot: Terminator
+Processing robot: RoboCop (Star) at position (0, 1)
+Robot RoboCop is looking.
+Robot RoboCop is moving.
+Robot RoboCop is firing.
+Updating position for robot: RoboCop
+Processing robot: BlueThunder (Beta) at position (0, 0)
+Robot BlueThunder is firing.
+Updating position for robot: BlueThunder
+Dequeued robot: MadBot for respawn
+End of step 2
+
+Final Stats:
+Alpha (Terminator) - Lives: 3 - Kills: 2
+Star (RoboCop) - Lives: 3 - Kills: 0
+Beta (BlueThunder) - Lives: 2 - Kills: 0
+Kidd (MadBot) - Lives: 2 - Kills: 1
+Step 3 of 8
+Current battlefield state:
+B . . . . 
+. S . . . 
+. . . A . 
+K . . . . 
+. . . . . 
+Processing robot: Terminator (Alpha) at position (2, 3)
+Robot Terminator is looking.
+Robot Terminator is stepping.
+Updating position for robot: Terminator
+Processing robot: RoboCop (Star) at position (1, 1)
+Robot RoboCop is looking.
+Robot RoboCop is moving.
+Robot RoboCop is firing.
+Updating position for robot: RoboCop
+Processing robot: BlueThunder (Beta) at position (0, 0)
+Robot BlueThunder is firing.
+Updating position for robot: BlueThunder
+Processing robot: MadBot (Kidd) at position (3, 0)
+Robot MadBot is looking.
+Robot MadBot is firing.
+Updating position for robot: MadBot
+Dequeued robot: RoboTank for respawn
+End of step 3
+
+Final Stats:
+Alpha (Terminator) - Lives: 3 - Kills: 2
+Star (RoboCop) - Lives: 3 - Kills: 0
+Beta (BlueThunder) - Lives: 2 - Kills: 0
+Kidd (MadBot) - Lives: 2 - Kills: 1
+Jet (RoboTank) - Lives: 2 - Kills: 0
+Step 4 of 8
+Current battlefield state:
+B . . . . 
+S . . J . 
+. . . . . 
+K . . . A 
+. . . . . 
+Processing robot: Terminator (Alpha) at position (3, 4)
+Robot Terminator is looking.
+Robot Terminator is stepping.
+Updating position for robot: Terminator
+Processing robot: RoboCop (Star) at position (1, 0)
+Robot RoboCop is looking.
+Robot RoboCop is moving.
+Robot RoboCop is firing.
+Updating position for robot: RoboCop
+Processing robot: BlueThunder (Beta) at position (0, 0)
+Robot BlueThunder is firing.
+Updating position for robot: BlueThunder
+Processing robot: MadBot (Kidd) at position (3, 0)
+Robot MadBot is looking.
+Robot MadBot is firing.
+Updating position for robot: MadBot
+Processing robot: RoboTank (Jet) at position (1, 3)
+Robot RoboTank is firing.
+Updating position for robot: RoboTank
+End of step 4
+
+Final Stats:
+Alpha (Terminator) - Lives: 3 - Kills: 2
+Star (RoboCop) - Lives: 3 - Kills: 0
+Beta (BlueThunder) - Lives: 2 - Kills: 0
+Kidd (MadBot) - Lives: 2 - Kills: 1
+Jet (RoboTank) - Lives: 2 - Kills: 0
+Step 5 of 8
+Current battlefield state:
+B S . . . 
+. . . J . 
+. . . . . 
+K . . . . 
+. . . . A 
+Processing robot: Terminator (Alpha) at position (4, 4)
+Robot Terminator is looking.
+Robot Terminator is stepping.
+Updating position for robot: Terminator
+Processing robot: RoboCop (Star) at position (0, 1)
+Robot RoboCop is looking.
+Robot RoboCop is moving.
+Robot RoboCop is firing.
+Updating position for robot: RoboCop
+Processing robot: BlueThunder (Beta) at position (0, 0)
+Robot BlueThunder is firing.
+Updating position for robot: BlueThunder
+Processing robot: MadBot (Kidd) at position (3, 0)
+Robot MadBot is looking.
+Robot MadBot is firing.
+Updating position for robot: MadBot
+Processing robot: RoboTank (Jet) at position (1, 3)
+Robot RoboTank is firing.
+Updating position for robot: RoboTank
+End of step 5
+
+Final Stats:
+Alpha (Terminator) - Lives: 3 - Kills: 2
+Star (RoboCop) - Lives: 3 - Kills: 0
+Beta (BlueThunder) - Lives: 2 - Kills: 0
+Kidd (MadBot) - Lives: 2 - Kills: 1
+Jet (RoboTank) - Lives: 2 - Kills: 0
+Step 6 of 8
+Current battlefield state:
+B . . . . 
+. S . J . 
+. . . . . 
+K . . . . 
+. . . A . 
+Processing robot: Terminator (Alpha) at position (4, 3)
+Robot Terminator is looking.
+Robot Terminator is stepping.
+Updating position for robot: Terminator
+Processing robot: RoboCop (Star) at position (1, 1)
+Robot RoboCop is looking.
+Robot RoboCop is moving.
+Robot RoboCop is firing.
+Updating position for robot: RoboCop
+Processing robot: BlueThunder (Beta) at position (0, 0)
+Robot BlueThunder is firing.
+Updating position for robot: BlueThunder
+Processing robot: MadBot (Kidd) at position (3, 0)
+Robot MadBot is looking.
+Robot MadBot is firing.
+Updating position for robot: MadBot
+Processing robot: RoboTank (Jet) at position (1, 3)
+Robot RoboTank is firing.
+Updating position for robot: RoboTank
+End of step 6
+
+Final Stats:
+Alpha (Terminator) - Lives: 3 - Kills: 2
+Star (RoboCop) - Lives: 3 - Kills: 0
+Beta (BlueThunder) - Lives: 2 - Kills: 0
+Kidd (MadBot) - Lives: 2 - Kills: 1
+Jet (RoboTank) - Lives: 2 - Kills: 0
+Step 7 of 8
+Current battlefield state:
+B . . . . 
+S . . J . 
+. . . . . 
+K . . . A 
+. . . . . 
+Processing robot: Terminator (Alpha) at position (3, 4)
+Robot Terminator is looking.
+Robot Terminator is stepping.
+Updating position for robot: Terminator
+Processing robot: RoboCop (Star) at position (1, 0)
+Robot RoboCop is looking.
+Robot RoboCop is moving.
+Robot RoboCop is firing.
+Updating position for robot: RoboCop
+Processing robot: BlueThunder (Beta) at position (0, 0)
+Robot BlueThunder is firing.
+Updating position for robot: BlueThunder
+Processing robot: MadBot (Kidd) at position (3, 0)
+Robot MadBot is looking.
+Robot MadBot is firing.
+Updating position for robot: MadBot
+Processing robot: RoboTank (Jet) at position (1, 3)
+Robot RoboTank is firing.
+Updating position for robot: RoboTank
+End of step 7
+
+Final Stats:
+Alpha (Terminator) - Lives: 3 - Kills: 2
+Star (RoboCop) - Lives: 3 - Kills: 0
+Beta (BlueThunder) - Lives: 2 - Kills: 0
+Kidd (MadBot) - Lives: 2 - Kills: 1
+Jet (RoboTank) - Lives: 2 - Kills: 0
+Step 8 of 8
+Current battlefield state:
+B . . . . 
+. . . J . 
+S . . A . 
+K . . . . 
+. . . . . 
+Processing robot: Terminator (Alpha) at position (2, 3)
+Robot Terminator is looking.
+Robot Terminator is stepping.
+Updating position for robot: Terminator
+Terminator has been upgraded to TerminatorRoboCop!
+Processing robot: RoboCop (Star) at position (2, 0)
+Robot RoboCop is looking.
+Robot RoboCop is moving.
+Robot RoboCop is firing.
+Updating position for robot: RoboCop
+Processing robot: BlueThunder (Beta) at position (0, 0)
+Robot BlueThunder is firing.
+Updating position for robot: BlueThunder
+Processing robot: MadBot (Kidd) at position (3, 0)
+Robot MadBot is looking.
+Robot MadBot is firing.
+Updating position for robot: MadBot
+Processing robot: RoboTank (Jet) at position (1, 3)
+Processing robot: TerminatorRoboCop (Alpha) at position (1, 3)
+Robot TerminatorRoboCop is looking.
+Robot TerminatorRoboCop is stepping.
+Robot TerminatorRoboCop is firing.
+Updating position for robot: TerminatorRoboCop
+Dequeued robot: RoboTank for respawn
+End of step 8
+
+Final Stats:
+Star (RoboCop) - Lives: 3 - Kills: 0
+Beta (BlueThunder) - Lives: 2 - Kills: 0
+Kidd (MadBot) - Lives: 2 - Kills: 1
+Alpha (TerminatorRoboCop) - Lives: 3 - Kills: 0
+Jet (RoboTank) - Lives: 1 - Kills: 0

@@ -47,7 +47,6 @@ public class Tor extends KwazamPiece {
      * @param y     The starting y-coordinate of the piece.
      * 
      *              **OOP Concept:** Constructor for object initialization.
-     *              Written by: Fakhira
      */
     public Tor(String color, int x, int y) {
         super(color, x, y, "Tor");
@@ -65,7 +64,6 @@ public class Tor extends KwazamPiece {
      *         for the Tor piece.
      *         **Design Pattern:** Strategy Pattern - Encapsulates movement logic
      *         within the Tor class.
-     *         Written by: Fakhira
      */
     @Override
     public List<int[]> getValidMoves(KwazamBoard board) {
@@ -102,7 +100,6 @@ public class Tor extends KwazamPiece {
      * the contract of the parent class.
      * **Note:** This method is intentionally empty as the transformation logic is
      * centralized in `GameController`.
-     * Written by: Fakhira
      */
     @Override
     public void transform() {

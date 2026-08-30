@@ -1,0 +1,24 @@
+{% extends "app/layout.html" %}
+{% block content %}
+<div class="formadditem" >
+ <br>
+<p><strong>Order ID:</strong> {{ order_id }}</p>
+<p><strong>Customer ID:</strong> {{ customer_id }}</p>
+<p><strong>Vendor ID:</strong> {{ vendor_id }}</p>
+<p><strong>Driver ID:</strong> Finding driver... </p>
+<p><strong>Petrol Type:</strong> {{ petrol_type }}</p>
+<p><strong>Quantity:</strong> {{ quantity }} Liters</p>
+<p><strong>Order Date:</strong> {{ order_date }}</p>
+<p><strong>Order Status:</strong> {{ order_status }}</p>
+<p><strong>Total Amount:</strong> ${{ total_amount }}</p>
+<p><strong>Delivery Address:</strong> {{ delivery_address }}</p>
+
+
+<form class="additemsubmission margintop" action="createorderform" method="POST">
+<div class="margintop">
+<a class="btn btn-danger btn-square buttonsize" href="/menu">Confirm</a>
+</div>
+</form>
+</div>
+
+{% endblock %}
